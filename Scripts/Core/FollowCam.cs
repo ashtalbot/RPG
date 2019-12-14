@@ -9,7 +9,7 @@ public class FollowCam : MonoBehaviour
     //public float distanceFromObject = 35f;
 
     
-    void Update()
+    void LateUpdate()
     {
         transform.position = target.position;
         //Vector3 lookOnObject = playerObject.position - transform.position;

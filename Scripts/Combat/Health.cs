@@ -15,21 +15,23 @@ namespace RPG.Combat
         public void TakeDamage(float damage)
         {
             healthPoints = Mathf.Max(healthPoints - damage, 0);
-            Die();
-
+            if (healthPoints == 0)
+            {
+                Die();
+            }
         }
 
         private void Die()
         {
+            //if (isDead)
+            //{
+            //return;
+            //}
+            isDead = true;
             if (isDead)
             {
-                 return;
-            }
-
-            isDead = true;
-            {
                 GetComponent<Animator>().SetTrigger("die");
-                
+               
             }
         }
 

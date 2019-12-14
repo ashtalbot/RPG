@@ -18,11 +18,7 @@ namespace RPG.Core
             currentAction = action;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+       
     }
 
 }
