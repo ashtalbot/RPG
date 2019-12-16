@@ -14,13 +14,14 @@ namespace RPG.Combat
 
         Health target;
         
-        float timeSinceLastAttack = 0;
+        float timeSinceLastAttack = Mathf.Infinity;
        // Transform target;
         private void Update()
         {
             timeSinceLastAttack += Time.deltaTime;
             if (target == null) return;
             if (target.IsDead()) return;
+           
             if (target != null && !GetIsInRange())
             {
                 

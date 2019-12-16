@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RPG.Core;
 
 namespace RPG.Core
 {
@@ -11,14 +12,18 @@ namespace RPG.Core
         public void StartAction(IAction action)
         {
             if (currentAction == action) return;
-            if (currentAction != null)
+            if (currentAction != null )
             {
                 currentAction.Cancel();
             }
             currentAction = action;
         }
 
-       
+       public void CancelCurrentAction()
+        {
+            StartAction(null);
+        }
+
     }
 
 }
