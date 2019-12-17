@@ -20,6 +20,7 @@ namespace RPG.Movement
 
         private void Update()
         {
+
             UpdateAnimator();
         }
 
@@ -28,6 +29,7 @@ namespace RPG.Movement
         {
             GetComponent<ActionScheduler>().StartAction(this);          
             MoveTo(destination);
+            //print("I'm Glitched");
         }
 
 
